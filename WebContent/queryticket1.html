@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+		<title></title>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+				width: 100%;
+			}
+			.head {
+				background-color: #4682B4;
+				color: white;
+				font-family: '微软雅黑';
+				font-weight: bold;
+				font-size:x-large;
+				border-bottom: 1px solid #4682B4;
+				height: 100px;
+				margin-bottom: 1px;
+				width: 100%;
+			}
+			
+			#hsp {
+				clear: both;
+				float: right;
+				padding-top: 4px;
+			}
+			
+			#hs {
+				font-size: 50%;
+				font-style: italic;
+			}
+			
+			#ht {
+				font-family: "楷体";
+				
+				color: white;
+				font-size: 150%;
+				margin-left:5%;
+			}
+			.navi{
+				background-color:#E5E5E5;
+				height: 35px;
+			}
+			.navi li {
+				float: left;
+				display: inline;
+				height: 30px;
+				color:white;
+				font-size: 14px;
+				font-weight: 700;
+				padding: 0 20px;
+				margin: 4px 30px;
+				line-height: 25px;
+				text-align: center;
+				border: 1px transparent solid;
+				border-radius: 5px;
+				position: relative;
+			}
+			
+			.navi li:hover,
+			.navi li.on {
+				cursor: pointer;
+				background:#8C8C8C;
+			}
+			/*进入网页主体！！！！！！！！！！！！！！*/
+			.container{
+				
+				margin:0 auto;
+				padding-bottom: 60px;
+				width: 994px;
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+			/*进入网页底部！！！！！！！！！！！！！！！！！！*/
+			
+			.foot {
+				border-top: 1px solid #4682B4;
+				color: white;
+				background-color: #4682B4;
+				text-align: center;
+				height: 60px;
+				width: 98.3%;
+				position:fixed;
+				bottom: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+		<div class="head">
+			<p id="ht">Timer12306<strong id="hs">|客服热线:12306</strong></p>
+		</div>
+		<div class="navi-w">
+		<div class="navi">
+			<span id="hsp" class="navi"><strong style="color:#2B542C">您好,&nbsp;&nbsp;xxx！</strong> <a href="Javascript:void(0)" style="color:#245580">退出&nbsp;&nbsp; </a>
+			<select style="width: 43%; margin-right: 10px;">
+				<option value="我的12306"><a href="user.html">我的12306</a></option>
+				<option value="已完成订单">已完成订单</option>
+				<option value="查看订单">查看订单</option>
+				<option value="查看个人信息">查看个人信息</option>
+				<option value="修改密码"><a href="修改密码界面">修改密码</a></option>
+				<option value="忘记密码">忘记密码</option>
+			</select>
+			</span>
+			<ul class="navi">
+				<li>
+					<a href="#">客运首页</a>
+				</li>
+				<li class="on">
+					<a href="#">车票预定</a>
+				</li>
+				<li >
+					<a href="#">余票查询</a>
+				</li>
+				<li>
+					<a href="#">出行向导</a>
+				</li>
+			</ul>
+		</div>
+			
+		<!--中部内容区-->
+		<div>
+			<img src="img/17.jpg" class="img-responsive" alt="Cinque Terre" style="width: 100%;height:84%">
+			<br/>
+			<div style="position:absolute; z-index:2; left:40px; top:18%">
+　　　　                     	<div style="text-align:left;color:#000000;float: left;"><strong>您现在的位置：</strong><a href="主界面">车票预订</a></div>
+			</div>
+		</div>
+		
+		<!--
+        	作者：offline
+        	时间：2016-07-16
+        	描述：地址显示插件
+        -->
+		<div id="jsContainer" class="jsContainer" style="height:0">
+    		<div id="tuna_alert" style="display:none;position:absolute;z-index:999;overflow:hidden;"></div>
+    		<div id="tuna_jmpinfo" style="visibility:hidden;position:absolute;z-index:120;"></div>
+		</div>
+	
+		<div style="position:absolute;top: 240px;width: 98.3%;">
+			<table align="center" style="width: 800px;padding: 10px;margin-bottom: 20px;font-size: 14px;">
+				<tr><td>出发地</td><td><input type="text" value="" size="15" id="fromPlace" name="fromPlace" mod="address|notice" mod_address_source="hotel" mod_address_suggest="@Beijing|北京|53@Shanghai|上海|321@Shenzhen|深圳|91@Guangzhou|广州|80@Qingdao|青岛|292@Chengdu|成都|324@Hangzhou|杭州|383@Wuhan|武汉|192@Tianjin|天津|343@Dalian|大连|248@Xiamen|厦门|61@Chongqing|重庆|394@" mod_address_reference="cityid" mod_notice_tip="中文/拼音" />
+									 <input id="cityid" name="cityid" type="hidden" value="{$cityid}" /></td>
+					<td>目的地</td><td><input type="text" value="" size="15" id="toPlace" name="toPlace" mod="address|notice" mod_address_source="hotel" mod_address_suggest="@Beijing|北京|53@Shanghai|上海|321@Shenzhen|深圳|91@Guangzhou|广州|80@Qingdao|青岛|292@Chengdu|成都|324@Hangzhou|杭州|383@Wuhan|武汉|192@Tianjin|天津|343@Dalian|大连|248@Xiamen|厦门|61@Chongqing|重庆|394@" mod_address_reference="getcityid" mod_notice_tip="中文/拼音" />
+									 <input id="getcityid" name="getcityid" type="hidden" value="{$getcityid}" /></td>
+					<td>出发日</td><td><input type="text" name="riddingDate" onFocus="WdatePicker()"></td>
+					<td><input type="button" style="align-content: center;width: 100px;" name="submit" value="查询"></td>
+				</tr>
+							
+				<tr><table class="table table-striped" align="center">
+					<tr><td width="80px" align="center">车次</td>
+						<td width="80px" align="center">出发站</td>
+						<td width="80px" align="center">到达站</td>
+						<td width="80px" align="center">出发时间</td>
+						<td width="80px" align="center">到达时间</td>
+						<td width="80px" align="center">商务座</td>
+						<td width="80px" align="center">特等座</td>
+						<td width="80px" align="center">软卧</td>
+						<td width="80px" align="center">硬卧</td>
+						<td width="80px" align="center">无座</td>
+						<td width="80px" align="center">备注</td></tr>
+					
+				</table></tr>
+				
+			</table>
+		</div>
+		
+		<div class="foot">
+			<p>
+				<a href="http://abputus.com" style="color: white">关于我们 &nbsp;</a>|
+				<a href="http://comment.com" style="color: white">&nbsp;网站声明 </a>
+			</p>
+			<p>版权所有©2016   &nbsp;  湘潭大学     &nbsp;Timer小组</p>
+		</div>
+		</div>
+
+<script type="text/javascript" src="js/fixdiv.js"></script>
+		<script type="text/javascript" src="js/address.js"></script>
+	</body>
+
+</html>

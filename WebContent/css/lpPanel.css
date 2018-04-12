@@ -1,0 +1,55 @@
+.rp-block{
+    width: 650px;
+	height:550px;
+	position: absolute;
+	left:50%;    
+	top:50%;    
+	margin-left:-300px;    
+	margin-top: -380px;
+	border-radius: 10px;
+}
+.rp-panel{
+	width: 410px;
+	height: 300px;
+	position: relative;
+    background:#FFFFFF ;
+    border: 1px solid #4682B4;   
+	margin-left:120px;  /**/
+	margin-top:100px;  
+	border-radius: 5px 5px 5px 5px;
+}
+.rp-panel1{
+	width: 410px;
+	height: 50px;
+	position:absolute;
+    background: #4682B4;
+	margin-left:0px;    
+	margin-top: 0px;  
+	border-radius: 5px 5px 0 0 ;
+}
+.rp-panel1 p{
+	text-align: center;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-size: x-large;
+}
+.rp-panel2{
+	float: left;
+	position: absolute;
+	background-image: url(../img/u6.png);
+	width: 410px;
+	height: 30px;
+	margin-left: -20px;
+	margin-top:65px ;
+}
+.rp-panel2 p{
+	text-align: center;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.rp-panel3{
+	float: left;
+	display: block;
+	margin-left: 20px;
+	margin-top:50px ;
+}

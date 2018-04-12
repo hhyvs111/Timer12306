@@ -1,0 +1,64 @@
+.lge-block{
+    width: 650px;
+	height:550px;
+	position: absolute;
+    background: #FFFFFF;
+    border: 2px solid #4682B4;
+	left:50%;    
+	top:50%;    
+	margin-left:-250px;    
+	margin-top: -250px;
+	border-radius: 10px;
+}
+.lge-panel{
+	width: 240px;
+	height: 220px;
+	position: relative;
+    background:#FFFFFF ;
+    border: 1px solid #4682B4;   
+	margin-left:205px;  /**/
+	margin-top:150px;  
+	border-radius: 5px 5px 5px 5px;
+	
+}
+.lge-panel1{
+	width: 240px;
+	height: 50px;
+	position:absolute;
+    background: #4682B4;
+	margin-left:0px;    
+	margin-top: 0px;  
+	border-radius: 5px 5px 0 0 ;
+}
+.lge-panel1 p{
+	text-align: center;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-size: x-large;
+}
+.lge-panel2{
+	float: left;
+	position: absolute;
+	background-image: url(../img/u18.png);
+	width: 240px;
+	height: 30px;
+	margin-left: -20px;
+	margin-top:65px ;
+}
+.lge-panel2 p{
+	text-align: center;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.lge-panel3{
+	float: left;
+	display: inline;
+	
+	margin-left: 0px;
+	margin-top: 120px ;
+}
+.lge-panel3 p{
+	font-size: large;
+	color: red;
+	text-align: center;
+}

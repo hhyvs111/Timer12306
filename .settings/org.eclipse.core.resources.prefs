@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/com/meession/am/entity/Route.java=UTF-8
+encoding//src/com/meession/am/service/route/ADQueryRouteServlet.java=UTF-8
+encoding//src/com/meession/am/service/route/QueryRouteAtoBServlet.java=UTF-8
+encoding//src/com/meession/common/DBConnection.java=UTF-8
+encoding//src/com/meession/um/dao/UserDAO.java=UTF-8
+encoding//src/com/meession/um/dao/impl/UserImpl.java=UTF-8
